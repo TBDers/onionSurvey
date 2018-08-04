@@ -57,3 +57,20 @@
 .page-footer {
   background-color: rgb(56, 184, 184)
 }
+
+#modal1 {
+  background-color: white !important;
+}
+
+.modal-footer {
+  background-color: white !important;
+}
+
+#modalLogo {
+  height: 47px;
+  width: 51px;
+  /* display: block;
+    margin-left: auto;
+    margin-right: auto; */
+    
+}

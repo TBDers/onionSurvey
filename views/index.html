@@ -36,7 +36,7 @@
           <a href="" style="color: grey;" id="nav2">Components</a>
         </li>
         <li>
-          <a href="" style="color: grey;" id="nav3">Resources</a>
+          <a href="#modal1" style="color: grey;" id="nav3" class="modal-trigger">Login</a>
         </li>
       </ul>
     </div>
@@ -85,7 +85,7 @@
     </ul>
     <div class="buttons-wrapper">
       <div class="row center">
-        <a class="waves-effect waves-light btn hoverable mg-rg">get started</a>
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">get started</a>
       </div>
     </div>
 
@@ -99,171 +99,53 @@
       <img src="../public/images/placeholder.png" id="analyticsPlaceholder" class="z-depth-5">
     </div>
     <br>
-    <div class="col s12 m2" id="surveySection">
-      <p style="text-align: center; font-size: 25px;">Build Employee Satisfaction Survey</p>
+    <br>
+    <br>
+    <br>
 
 
-      <br>
+    <!-- Modal Structure for Login -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
 
-      <!-- Survey Section -->
+        <h5 style="text-align: center; color: grey;">Sign In</h5>
 
-      <!-- Rating 1-10 Questions -->
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate" required>
+          <label for="email">Email</label>
+        </div>
 
-      <div class="col s12 m2">
-        <ul class="collapsible popout">
-          <li>
-            <div class="collapsible-header" style="background-color: rgb(56, 184, 184); color: white;">
-              <i class="material-icons" style="color: white;">control_point</i>Add Rating 1-10 Questions</div>
-            <div class="collapsible-body">
 
-              <ul class="collapsible">
-                <li>
-                  <div class="collapsible-header">
-                    <i class="material-icons">control_point</i>How happy are you working at Example Inc?</div>
-                  <div class="collapsible-body">
-                    <span>
-                      <a class="waves-effect waves-light btn">
-                        <i class="material-icons left">note_add</i>Add Question To Survey</a>
-                    </span>
-                  </div>
-                </li>
-                <ul class="collapsible">
-                  <li>
-                    <div class="collapsible-header">
-                      <i class="material-icons">control_point</i>I frequently receive recognition for my work.</div>
-                    <div class="collapsible-body">
-                      <span>
-                        <a class="waves-effect waves-light btn">
-                          <i class="material-icons left">note_add</i>Add Question To Survey</a>
-                      </span>
-                    </div>
-                  </li>
-                  <ul class="collapsible">
-                    <li>
-                      <div class="collapsible-header">
-                        <i class="material-icons">control_point</i>I have the resources I need to do my job well.</div>
-                      <div class="collapsible-body">
-                        <span>
-                          <a class="waves-effect waves-light btn">
-                            <i class="material-icons left">note_add</i>Add Question To Survey</a>
-                        </span>
-                      </div>
-                    </li>
-                    <ul class="collapsible">
-                      <li>
-                        <div class="collapsible-header">
-                          <i class="material-icons">control_point</i>My manager provides me with feedback about my performance to help me do my job
-                          better.
-                        </div>
-                        <div class="collapsible-body">
-                          <span>
-                            <a class="waves-effect waves-light btn">
-                              <i class="material-icons left">note_add</i>Add Question To Survey</a>
-                          </span>
-                        </div>
-                      </li>
-                      <ul class="collapsible">
-                        <li>
-                          <div class="collapsible-header">
-                            <i class="material-icons">control_point</i>I feel empowered to make decisions regarding my work.</div>
-                          <div class="collapsible-body">
-                            <span>
-                              <a class="waves-effect waves-light btn">
-                                <i class="material-icons left">note_add</i>Add Question To Survey</a>
-                            </span>
-                          </div>
-                        </li>
-                        <ul class="collapsible">
-                          <li>
-                            <div class="collapsible-header">
-                              <i class="material-icons">control_point</i>I would highly recommend my manager to others.</div>
-                            <div class="collapsible-body">
-                              <span>
-                                <a class="waves-effect waves-light btn">
-                                  <i class="material-icons left">note_add</i>Add Question To Survey</a>
-                              </span>
-                            </div>
-            </div>
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate" minlength="6" required>
+          <label for="password">Password</label>
+        </div>
+
+
+        <br>
+        <div class="text-center p-t-136">
+          <a class="txt2" href="../views/register.html">
+            Register
+            <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+          </a>
+        </div>
+        <br>
+        <div class="text-center p-t-136">
+          <a class="txt2" href="#">
+            Forgot Password?
+            <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+          </a>
+        </div>
+
+
       </div>
-
-      <!-- Open Ended Question Section -->
-
-      <div class="col s12 m2">
-        <ul class="collapsible popout">
-          <li>
-            <div class="collapsible-header" style="background-color: rgb(56, 184, 184); color: white;">
-              <i class="material-icons" style="color: white;">control_point</i>Add Open Response Questions</div>
-            <div class="collapsible-body">
-
-              <ul class="collapsible">
-                <li>
-                  <div class="collapsible-header">
-                    <i class="material-icons">control_point</i>What are the greatest strengths of our organization?</div>
-                  <div class="collapsible-body">
-                    <span>
-                      <a class="waves-effect waves-light btn">
-                        <i class="material-icons left">note_add</i>Add Question To Survey</a>
-                    </span>
-                  </div>
-                </li>
-                <ul class="collapsible">
-                  <li>
-                    <div class="collapsible-header">
-                      <i class="material-icons">control_point</i>What areas of our organization need the most improvement?</div>
-                    <div class="collapsible-body">
-                      <span>
-                        <a class="waves-effect waves-light btn">
-                          <i class="material-icons left">note_add</i>Add Question To Survey</a>
-                      </span>
-                    </div>
-                  </li>
-                  <ul class="collapsible">
-                    <li>
-                      <div class="collapsible-header">
-                        <i class="material-icons">control_point</i>Do you feel that your manager is the right person for the job?</div>
-                      <div class="collapsible-body">
-                        <span>
-                          <a class="waves-effect waves-light btn">
-                            <i class="material-icons left">note_add</i>Add Question To Survey</a>
-                        </span>
-                      </div>
-                    </li>
-                    <ul class="collapsible">
-                      <li>
-                        <div class="collapsible-header">
-                          <i class="material-icons">control_point</i>How would you describe your manager's strenghts and weaknesses?
-                        </div>
-                        <div class="collapsible-body">
-                          <span>
-                            <a class="waves-effect waves-light btn">
-                              <i class="material-icons left">note_add</i>Add Question To Survey</a>
-                          </span>
-                        </div>
-                      </li>
-                      <ul class="collapsible">
-                        <li>
-                          <div class="collapsible-header">
-                            <i class="material-icons">control_point</i>What could our organization be doing better to increase employee satisfaction?</div>
-                          <div class="collapsible-body">
-                            <span>
-                              <a class="waves-effect waves-light btn">
-                                <i class="material-icons left">note_add</i>Add Question To Survey</a>
-                            </span>
-                          </div>
-                        </li>
-                        <ul class="collapsible">
-                          <li>
-                            <div class="collapsible-header">
-                              <i class="material-icons">control_point</i>Do you feel that you have what you need to be successful at this company?</div>
-                            <div class="collapsible-body">
-                              <span>
-                                <a class="waves-effect waves-light btn">
-                                  <i class="material-icons left">note_add</i>Add Question To Survey</a>
-                              </span>
-                            </div>
-            </div>
+      <div class="modal-footer">
+        <a href="../views/survey.html" class="modal-close waves-effect waves-green btn-flat" style="color: white; background-color: darkcyan;">Login</a>
       </div>
     </div>
+
+
+
 
     <!-- Footer -->
 

@@ -1,0 +1,59 @@
+#logo {
+  margin-left: 20px;
+  margin-top: 7px;
+}
+
+#nav1:hover {
+  background-color: rgb(56, 184, 184) !important;
+  color: white !important;
+}
+
+#nav2:hover {
+  background-color: rgb(56, 184, 184) !important;
+  color: white !important;
+}
+
+#nav3:hover {
+  background-color: rgb(56, 184, 184) !important;
+  color: white !important;
+}
+
+.buttons-wrapper {
+  position: absolute;
+  height: calc(100vh);
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 997;
+  top: 0;
+  pointer-events: none;
+  width: 100%;
+}
+.buttons-wrapper a {
+  pointer-events: auto;
+}
+.mg-rg {
+  margin-right: 1rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.indicator-item.active {
+  background-color: darkcyan !important;
+}
+
+#analyticsPlaceholder {
+  max-width: 100%;
+    max-height: 100%;
+    margin-top: 10px;
+}
+
+#surveySection {
+  margin-bottom: 500px;
+}
+
+.page-footer {
+  background-color: rgb(56, 184, 184)
+}

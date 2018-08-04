@@ -13,3 +13,14 @@ document.addEventListener('DOMContentLoaded', function () {
     var instances = M.Collapsible.init(elems, { 'accordion': true });
 });
 
+//Modal for Login
+document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('.modal');
+    var instances = M.Modal.init(elems, { 'opacity': .5 });
+});
+
+//account creation page
+document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, { 'classes': '' });
+});

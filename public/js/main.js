@@ -42,3 +42,15 @@ document.addEventListener('DOMContentLoaded', function () {
     var elems = document.querySelectorAll('.sidenav');
     var instances = M.Sidenav.init(elems, { 'edge': 'right' });
 });
+
+
+
+//Questions and logic for survey preview
+
+var questions = ["How happy are you working at Example Inc?"];
+
+
+$("#add1").on("click", function (event) {
+    event.preventDefault();
+    $("#slideContainer").append(questions[0]);
+});

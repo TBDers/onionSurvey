@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Create Survey</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+
+    <!--Optimize for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--jquery CDN-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <!--Link to local CSS File-->
+    <link rel="stylesheet" href="../public/styles/style.css">
+
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <br>
+        <div class="card" style="padding: 30px;">
+            <div class="card-header" style="font-size: 30px; text-align: center; font-weight: bold; background-color: darkcyan; color: white;">
+                Survey Questions
+            </div>
+            <div class="card-body">
+
+
+                <hr>
+                <br>
+                <h5>
+                    <strong>Question 1</strong>
+                </h5>
+                <h5>I am happy working at "Company Name"</h5>
+                <p class="range-field">
+                    <input type="range" id="test5" min="1" max="10" />
+                </p>
+                <hr>
+                <br>
+                <h5>
+                    <strong>Question 2</strong>
+                </h5>
+                <h5>I would highly recommend my manager to others.</h5>
+                <p class="range-field">
+                    <input type="range" id="test5" min="1" max="10" />
+                </p>
+
+                <hr>
+                <br>
+                <h5>
+                    <strong>Question 3</strong>
+                </h5>
+                <h5>How would you describe your manager's strenghts and weaknesses?</h5>
+
+                <div class="input-field col s12">
+                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+                    <label for="textarea1">Start typing here</label>
+                </div>
+            </div>
+            </form>
+            <br>
+
+
+        </div>
+        <div id="submitBtn">
+            <button type="submit" class="waves-effect waves-light btn" id="submit" style="background-color: darkcyan;">
+
+                Submit</button>
+        </div>
+    </div>
+    </div>
+    <br>
+
+
+
+    <hr>
+
+
+    </div>
+
+
+</body>
+
+
+<!--Materialize JS CDN-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+<!--Local JS File-->
+<script src="../public/js/main.js"></script>
+
+</html>

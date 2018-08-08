@@ -1,3 +1,15 @@
+//On Scroll Nav
+$(document).on("scroll", function (event) {
+    $("#logo").attr("src", "images/logo_main2.png");
+});
+$(window).scroll(function () {
+    var height = $(window).scrollTop();
+
+    if (height <= 50) {
+        $("#logo").attr("src", "images/logo_main.png");
+    }
+});
+
 
 // Slider 
 

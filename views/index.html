@@ -19,28 +19,32 @@
   <!--Link to local CSS File-->
   <link rel="stylesheet" href="styles/style.css">
 
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
 
   <!-- Nav -->
-
-  <nav>
-    <div class="nav-wrapper" style="background-color: white;">
-      <img src="/images/logo.png" id="logo" class="brand-logo" style="width: 51px; height: 47px;">
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li>
-          <a href="" style="color: grey;" id="nav1">Contact</a>
-        </li>
-        <li>
-          <a href="" style="color: grey;" id="nav2">Components</a>
-        </li>
-        <li>
-          <a href="#modal1" style="color: grey;" id="nav3" class="modal-trigger">Login</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper" style="background-color: white;">
+        <img src="/images/logo_main.png" id="logo" class="brand-logo" style="width: 216px; height: 44px;">
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li>
+            <a href="" style="color: grey;" id="nav1">Contact</a>
+          </li>
+          <li>
+            <a href="" style="color: grey;" id="nav2">Components</a>
+          </li>
+          <li>
+            <a href="#modal1" style="color: grey;" id="nav3" class="modal-trigger">Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
 
   <!-- Slider Section -->
 
@@ -153,32 +157,41 @@
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
-            <h5 class="white-text">Footer Content</h5>
-            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+            <img src="images/logo_secondary_transparent.png" id="footerLogo" style="width: 185px; height: 37px; margin-top: 20px;">
+
+
           </div>
           <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Links</h5>
+
             <ul>
               <li>
-                <a class="grey-text text-lighten-3" href="#!">Link 1</a>
+                <div class="wrapper">
+
+                  <a target="_blank" href="https://linkedin.com">
+                    <i class="fa fa-2x fa-linkedin-square"></i>
+                  </a>
+                  <a target="_blank" href="https://twitter.com">
+                    <i class="fa fa-2x fa-twitter-square"></i>
+                  </a>
+                  <a target="_blank" href="https://facebook.com">
+                    <i class="fa fa-2x fa-facebook-square"></i>
+                  </a>
+                  <a target="_blank" href="https://instagram.com">
+                    <i class="fa fa-2x fa-instagram"></i>
+
+                </div>
+                </a>
               </li>
-              <li>
-                <a class="grey-text text-lighten-3" href="#!">Link 2</a>
-              </li>
-              <li>
-                <a class="grey-text text-lighten-3" href="#!">Link 3</a>
-              </li>
-              <li>
-                <a class="grey-text text-lighten-3" href="#!">Link 4</a>
-              </li>
-            </ul>
+
           </div>
         </div>
       </div>
       <div class="footer-copyright">
         <div class="container">
-          © 2018 Copyright Text
-          <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+          <div class="col l4 offset-l2 s12">
+            <p style="font-size: 12px;">info@onionsurvey.com | © 2018 Copyright</p>
+          </div>
+
         </div>
       </div>
     </footer>

@@ -1,16 +1,16 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "TBD",
-    "host": "localhost",
+    "username": "tbd",
+    "password": "Onion2018",
+    "database": "onionDB",
+    "host": "138.68.20.131",
     "dialect": "mysql"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "testdb",
-    "host": "localhost",
+    "username": "tbd",
+    "password": "Onion2018",
+    "database": "onionDB",
+    "host": "138.68.20.131",
     "dialect": "mysql",
     "logging": false
   },

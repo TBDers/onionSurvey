@@ -107,3 +107,12 @@
 .sidenav {
   width: 50%;
 }
+
+.sidenav-trigger {
+  color: silver;
+ 
+}
+
+#parallax1 {
+  height: 400px;
+}

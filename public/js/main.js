@@ -54,3 +54,21 @@ $("#add1").on("click", function (event) {
     event.preventDefault();
     $("#slideContainer").append(questions[0]);
 });
+
+
+//Survey Preview Button
+document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('.fixed-action-btn');
+    var instances = M.FloatingActionButton.init(elems, { 'direction': 'top' });
+});
+
+
+//Parallax in survey page
+document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('.parallax');
+    var instances = M.Parallax.init(elems, { 'responsiveThreshold': 0 });
+
+});
+
+
+

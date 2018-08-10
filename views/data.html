@@ -17,10 +17,13 @@
         crossorigin="anonymous"></script>
 
     <!--Link to local CSS File-->
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="../public/styles/style.css">
+    <link rel="stylesheet" href="../public/styles/ion.rangeSlider.css">
+    <link rel="stylesheet" href="../public/styles/ion.rangeSlider.skinHTML5.css">
+
 
     <!--Favicon-->
-    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="../public/images/favicon.ico" type="image/x-icon" />
 
 </head>
 
@@ -41,19 +44,27 @@
                 <h5>
                     <strong>Question 1</strong>
                 </h5>
-                <h5>I am happy working at "Company Name"</h5>
-                <p class="range-field">
-                    <input type="range" id="question1" min="1" max="10" />
-                </p>
+                <h5>On a scale of 1 to 10 (1 being the worst, 10 being the best) how would you rate Q's teaching ability?</h5>
+                <div style="position: relative; padding: 50px;">
+
+                    <div>
+                        <input type="text" id="range_08" value="" name="range_08" />
+                    </div>
+
+                </div>
                 <hr>
                 <br>
                 <h5>
-                    <strong>Question 2</strong>
+                    <strong>Question 1</strong>
                 </h5>
-                <h5>I would highly recommend my manager to others.</h5>
-                <p class="range-field">
-                    <input type="range" id="question2" min="1" max="10" />
-                </p>
+                <h5>On a scale of 1 to 10 (1 being the worst, 10 being the best) how would you rate Q's teaching ability?</h5>
+                <div style="position: relative; padding: 50px;">
+
+                    <div>
+                        <input type="text" id="range_08" value="" name="range_08" />
+                    </div>
+
+                </div>
 
                 <hr>
                 <br>
@@ -97,7 +108,23 @@
 <!--Materialize JS CDN-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 <!--Local JS File-->
-<script src="js/survey.js"></script>
+<script src="../public/js/survey.js"></script>
+<script src="../public/js/ion.rangeSlider.min.js"></script>
+<script>    
 
+    $("#range_08").ionRangeSlider({
+        grid: true,
+        from: 5,
+        values: [
+            "0", "1",
+            "2", "3",
+            "4", "5",
+            "6", "7",
+            "8", "9",
+            "10"
+        ]
+    });
+
+</script>
 
 </html>

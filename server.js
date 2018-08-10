@@ -1,24 +1,29 @@
+// Dependencies
+// =============================================================
 require("dotenv").config();
 var express = require("express");
 var bodyParser = require("body-parser");
-var exphbs = require("express-handlebars");
+var path = require("path");
+var http = require("http");
+var fs = require("fs");
+var connection = require("./config/connection.js")
 
-var db = require("./models");
 
+// Sets up the Express App
+// =============================================================
 var app = express();
 var PORT = process.env.PORT || 3000;
 
 app.use(express.static("public"));
-// Middleware
-app.use(bodyParser.urlencoded({ extended: false }));
+
+// Sets up the Express app to handle data parsing
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 
-// Handlebars
-
 
 // Routes
-// require("./routes/apiRoutes")(app);
+require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
 var syncOptions = { force: false };
@@ -38,6 +43,12 @@ app.listen(PORT, function () {
     PORT
   );
 });
-// });
+connection.connect(function (err) {
+  if (err) {
+    console.error("error connecting: " + err.stack);
+    return;
+  }
+  console.log("connected as id " + connection.threadId);
+});
 
 module.exports = app;

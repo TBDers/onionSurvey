@@ -29,25 +29,38 @@
 
 <body>
 
-    <!--Slide Out Preview-->
+    <!--Slide Out-->
 
     <ul id="slide-out" class="sidenav">
         <li>
             <div class="user-view">
-                <div class="background">
-                    <img src="https://images.unsplash.com/photo-1481007553706-bde1ba8e91fd?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=caec8d3a7e2fbd72ff14891daf9df3d1&auto=format&fit=crop&w=1650&q=80">
+                <div class="background" style="background-color: darkcyan;">
+
                 </div>
 
                 </a>
 
-                <span class="white-text name">Survey Preview</span>
+                <span class="white-text name" style="font-family: 'proxima nova'; font-size: 20px;">Generate Survey</span>
 
                 <br>
             </div>
         </li>
 
         <li id="slideContainer">
+            <div class="row">
+                <form class="col s12">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Add the email addresses of those you would like to recieve this survey.</label>
+                            <span class="helper-text" data-error="wrong" data-success="right">Separate each email by comma.</span>
+                        </div>
+                    </div>
+                </form>
+                <a class="waves-effect waves-light btn" id="sendSurveyButton" style="margin-left: 10px;">
+                    <i class="material-icons left">send</i>Send</a>
 
+            </div>
         </li>
 
     </ul>
@@ -80,7 +93,7 @@
         <a href="#" data-target="slide-out" class="sidenav-trigger">
 
             <i class="large material-icons">find_in_page</i>
-            <br> Survey Preview
+            <br> Generate Survey
         </a>
 
 
@@ -267,6 +280,8 @@
             <img src="https://images.unsplash.com/photo-1462206092226-f46025ffe607?ixlib=rb-0.3.5&s=bade07f91bfc009afc3f411214cc644d&auto=format&fit=crop&w=1653&q=80">
         </div>
     </div>
+
+
 
 
 

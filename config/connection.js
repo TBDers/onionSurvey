@@ -14,18 +14,7 @@ var mysql = require("mysql");
 //     dialect: "mysql"
 // host: "mnwax9mxzow0k7hi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
 
-var connection = mysql.createConnection({
-    host: "localhost",
+var connection = mysql.createConnection(process.env.JAWSDB_URL);
 
-    // Your port; if not 3306
-    port: 3306,
-
-    // Your username
-    user: "root",
-
-    // Your password
-    password: "Terr8Y**0410",
-    database: "onion_db"
-});
 
 module.exports = connection;

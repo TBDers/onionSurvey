@@ -28,6 +28,6 @@ var mysql = require("mysql");
 // database: "onion_db"
 // });
 
-var connection = mysql.createConnection(process.env.JAWSDB_URL);
+// var connection = mysql.createConnection(process.env.JAWSDB_URL);
 
-module.exports = connection;
+// module.exports = connection;

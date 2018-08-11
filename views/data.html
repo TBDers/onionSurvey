@@ -40,7 +40,7 @@
             <p>Thank you for taking a moment to take our survey. Results will be availible soon.</p>
         </div>
         <div class="modal-footer">
-            <a href="www.onionsurvey.com" class="modal-close waves-effect waves-green btn-flat">Close</a>
+            <a href="http://localhost:3000" class="modal-close waves-effect waves-green btn-flat">Close</a>
         </div>
     </div>
 
@@ -56,7 +56,8 @@
                 <h5>
                     <strong>Question 1</strong>
                 </h5>
-                <h5>On a scale of 1 to 10 (1 being the worst, 10 being the best) how would you rate Q's teaching ability?</h5>
+                <h5>On a scale of 1 to 10 (1 being unlikely, 10 being likely), will Murph remember us when he's a bigshot at
+                    Google??</h5>
                 <div style="position: relative; padding: 50px;">
 
                     <div>
@@ -70,30 +71,13 @@
                     <strong>Question 2</strong>
                 </h5>
                 <h5>How many more days of class will Q miss this cohort?</h5>
-                <p>
-                    <label>
-                        <input class="with-gap" name="group3" type="radio" value="3" checked />
-                        <span>3</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input class="with-gap" name="group3" type="radio" value="5" />
-                        <span>5</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input class="with-gap" name="group3" type="radio" value="7" />
-                        <span>7</span>
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        <input class="with-gap" name="group3" type="radio" value="9" />
-                        <span>9</span>
-                    </label>
-                </p>
+                <div style="position: relative; padding: 50px;">
+
+                    <div>
+                        <input type="text" id="question2" value="" name="range_02" />
+                    </div>
+
+                </div>
 
                 <hr>
                 <br>
@@ -101,10 +85,15 @@
                     <strong>Question 3</strong>
                 </h5>
                 <h5>What is your favorite language learned so far?</h5>
-
                 <div class="input-field col s12">
-                    <textarea id="textarea1" class="materialize-textarea"></textarea>
-                    <label for="textarea1">Start typing here</label>
+                    <select>
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="HTML/CSS">HTML/CSS</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="JQuery">JQuery</option>
+                        <option value="MySQL">MySQL</option>
+                    </select>
+                    <label>Choose your language.</label>
                 </div>
             </div>
             <hr>
@@ -129,7 +118,7 @@
             <div style="position: relative; padding: 50px;">
 
                 <div>
-                    <input type="text" id="range_02" value="" name="range_01" />
+                    <input type="text" id="question5" value="" name="range_03" />
                 </div>
 
             </div>
@@ -169,7 +158,13 @@
         ]
     });
 
-    $("#range_02").ionRangeSlider({
+    $("#question2").ionRangeSlider({
+        min: 0,
+        max: 100,
+        from: 50
+    });
+
+    $("#question5").ionRangeSlider({
         grid: true,
         from: 5,
         values: [
@@ -186,6 +181,9 @@
         $('.modal').modal();
     });
 
+    $(document).ready(function () {
+        $('select').formSelect();
+    });
 
 </script>
 

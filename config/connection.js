@@ -13,6 +13,7 @@ var connection = mysql.createConnection({
 
 });
 
+
 // var connection = mysql.createConnection(process.env.JAWSDB_URL);
 
 module.exports = connection;

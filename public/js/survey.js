@@ -8,6 +8,8 @@ $("#submit").on("click", function (event) {
         question3: $("#textarea1").val().trim(),
     };
 
+    console.log(newSurvey);
+
     $.post("/api/surveys", newSurvey,
         function (data) {
             if (data) {

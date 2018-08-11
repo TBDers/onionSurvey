@@ -17,7 +17,10 @@
         crossorigin="anonymous"></script>
 
     <!--Link to local CSS File-->
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/ion.rangeSlider.css">
+    <link rel="stylesheet" href="/styles/ion.rangeSlider.skinHTML5.css">
+
 
     <!--Favicon-->
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
@@ -26,6 +29,20 @@
 
 <body>
 
+    <!-- Modal -->
+
+    <!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a> -->
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Survey Complete!</h4>
+            <p>Thank you for taking a moment to take our survey. Results will be availible soon.</p>
+        </div>
+        <div class="modal-footer">
+            <a href="http://localhost:3000" class="modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
 
     <div class="container">
         <br>
@@ -34,70 +51,140 @@
                 Survey Questions
             </div>
             <div class="card-body">
-
-
                 <hr>
                 <br>
                 <h5>
                     <strong>Question 1</strong>
                 </h5>
-                <h5>I am happy working at "Company Name"</h5>
-                <p class="range-field">
-                    <input type="range" id="question1" min="1" max="10" />
-                </p>
+                <h5>On a scale of 1 to 10 (1 being unlikely, 10 being likely), will Murph remember us when he's a bigshot at
+                    Google??</h5>
+                <div style="position: relative; padding: 50px;">
+
+                    <div>
+                        <input type="text" id="question1" value="" name="range_01" />
+                    </div>
+
+                </div>
                 <hr>
                 <br>
                 <h5>
                     <strong>Question 2</strong>
                 </h5>
-                <h5>I would highly recommend my manager to others.</h5>
-                <p class="range-field">
-                    <input type="range" id="question2" min="1" max="10" />
-                </p>
+                <h5>How many more days of class will Q miss this cohort?</h5>
+                <div style="position: relative; padding: 50px;">
+
+                    <div>
+                        <input type="text" id="question2" value="" name="range_02" />
+                    </div>
+
+                </div>
 
                 <hr>
                 <br>
                 <h5>
                     <strong>Question 3</strong>
                 </h5>
-                <h5>How would you describe your manager's strenghts and weaknesses?</h5>
-
+                <h5>What is your favorite language learned so far?</h5>
                 <div class="input-field col s12">
-                    <textarea id="textarea1" class="materialize-textarea"></textarea>
-                    <label for="textarea1">Start typing here</label>
+                    <select>
+                        <option value="" disabled selected>Choose your option</option>
+                        <option value="HTML/CSS">HTML/CSS</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="JQuery">JQuery</option>
+                        <option value="MySQL">MySQL</option>
+                    </select>
+                    <label>Choose your language.</label>
                 </div>
             </div>
-            </form>
+            <hr>
             <br>
+            <h5>
+                <strong>Question 4</strong>
+            </h5>
+            <h5>Onion Survey is the best project so far!</h5>
+            <p>
+                <label>
+                    <input class="with-gap" name="group4" type="radio" checked/>
+                    <span>True</span>
+                </label>
+            </p>
+
+            <hr>
+            <br>
+            <h5>
+                <strong>Question 5</strong>
+            </h5>
+            <h5>Seriously though, rate your experience so far at the U of U Coding Bootcamp.</h5>
+            <div style="position: relative; padding: 50px;">
+
+                <div>
+                    <input type="text" id="question5" value="" name="range_03" />
+                </div>
+
+            </div>
 
 
         </div>
         <div id="submitBtn">
-            <button type="submit" class="waves-effect waves-light btn" id="submit" style="background-color: darkcyan;">
+            <button type="submit" data-target="modal1" class="waves-effect waves-light btn modal-trigger" id="submit" style="background-color: darkcyan;">
 
                 Submit</button>
         </div>
     </div>
     </div>
     <br>
-
-
-
     <hr>
-
-
     </div>
-
-
-
-
 </body>
 
 
 <!--Materialize JS CDN-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 <!--Local JS File-->
-<script src="js/survey.js"></script>
+<script src="/js/survey.js"></script>
+<script src="/js/ion.rangeSlider.min.js"></script>
+<script>    
 
+    $("#question1").ionRangeSlider({
+        grid: true,
+        from: 5,
+        values: [
+            "0", "1",
+            "2", "3",
+            "4", "5",
+            "6", "7",
+            "8", "9",
+            "10"
+        ]
+    });
+
+    $("#question2").ionRangeSlider({
+        min: 0,
+        max: 100,
+        from: 50
+    });
+
+    $("#question5").ionRangeSlider({
+        grid: true,
+        from: 5,
+        values: [
+            "0", "1",
+            "2", "3",
+            "4", "5",
+            "6", "7",
+            "8", "9",
+            "10"
+        ]
+    });
+
+    $(document).ready(function () {
+        $('.modal').modal();
+    });
+
+    $(document).ready(function () {
+        $('select').formSelect();
+    });
+
+</script>
 
 </html>

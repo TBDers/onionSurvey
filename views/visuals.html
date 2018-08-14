@@ -22,34 +22,118 @@
     <!--Favicon-->
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
 
-     <!-- Plotly.js -->
+    <!-- Plotly.js -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
 
 </head>
 
-<body>
+<body id="survey-page">
+
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper" style="background-color: white;">
+                <img src="/images/logo_main.png" id="logo" class="brand-logo" style="width: 216px; height: 44px;">
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li>
+                        <a href="" style="color: grey;" id="nav1">Contact</a>
+                    </li>
+                    <li>
+                        <a href="" style="color: grey;" id="nav2">Components</a>
+                    </li>
+                    <li>
+                        <a href="#modal1" style="color: grey;" id="nav3" class="modal-trigger">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
 
 
-<div id="Data">
-    <button type="submit" class="waves-effect waves-light btn" id="getData" style="background-color: darkcyan;">
-
-        Get Data</button>
-        
-</div>
-
-<div id="ans1div"><!-- Plotly chart will be drawn inside this DIV --></div>
-<div id="ans2div"><!-- Plotly chart will be drawn inside this DIV --></div>
-
-<div id="wordcloud"></div>
+    <div class="container survey-page">
+        <div id="Data">
+            <button type="submit" class="waves-effect waves-light btn" id="getData" style="background-color: darkcyan;">Get Data</button>
+        </div>
 
 
-<div id="ans3div"><!-- Plotly chart will be drawn inside this DIV --></div>
-<div id="ans4div"><!-- Plotly chart will be drawn inside this DIV --></div>
-<div id="ans5div"><!-- Plotly chart will be drawn inside this DIV --></div>
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card">
+                    <div class="card-image">
+                        <div id="ans1div">
+                            <!-- Plotly chart will be drawn inside this DIV -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m6">
+                <div class="card">
+                    <div class="card-image">
+                        <div id="ans2div">
+                            <!-- Plotly chart will be drawn inside this DIV -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 m6">
+                <div class="card">
+                    <div class="card-image">
+                        <div id="wordcloud"></div>
+
+                    </div>
+                </div>
+            </div>
 
 
 
+            <!-- <div class="col s12 m5">
+                <div class="card">
+                    <div class="card-image">
+                        <div id="ans3div">
+                            <!-- Plotly chart will be drawn inside this DIV
+                        </div>
+
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="col s12 m6">
+                <div class="card">
+                    <div class="card-image">
+                        <div id="ans5div">
+                            <!-- Plotly chart will be drawn inside this DIV -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col s12 m12">
+                <div class="card">
+                    <div class="card-image">
+                        <div class="center-align" id="ans4div">
+                            <!-- Plotly chart will be drawn inside this DIV -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+    </div>
 
 
 </body>
@@ -64,7 +148,7 @@
 <script src="/js/d3.wordcloud.js"></script>
 <!-- <script src="/js/example.words.js"></script> -->
 <script>
-    
+
 </script>
 
 </html>

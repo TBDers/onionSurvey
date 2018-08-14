@@ -116,3 +116,12 @@
 #parallax1 {
   height: 400px;
 }
+
+#survey-page {
+background: -webkit-linear-gradient(45deg, #eeeeee 0%,#cccccc 63%);
+}
+
+.survey-page{
+  background-color:  whitesmoke;
+
+}

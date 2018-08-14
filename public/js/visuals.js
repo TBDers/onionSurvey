@@ -165,6 +165,45 @@ d3.wordcloud()
 .words(wordDisplay)
 .start();
 
+//////////////////////////////////////////////// ANSWER 4 CHART /////////////////////////////////////////////////////// 
+
+
+
+/////////////////////////////////////////////// ANSWER 5 CHART /////////////////////////////////////////////////////// 
+
+
+var ydistinct5 = [0,0,0,0,0,0,0,0,0,0];        // ydistinct is the actual array we want to use for our bar chart.
+for (b=0; b<10; b++){                         // these two for loops are counting the amount of answers for each distinct y and pushing them into an
+    for (d=0; d<ans5.length; d++){     // array that includes the number 0 for answers that were never chosen.
+    if (ans5[d] == b){
+      ydistinct5[b-1] = ydistinct5[b-1] +1;
+    }
+
+    }
+}
+console.log(ydistinct5)
+
+var trace1 = {
+    x: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    y: ydistinct5,
+    mode: 'lines+markers',
+    type: 'scatter'
+  };
+  
+
+  
+  var data = [trace1];
+
+  var layout5 = {
+    title: "question 5",
+      height: 400,
+      width: 500,
+      yaxis: {title: "Total Votes"},
+      xaxis: {title: "Bootcamp Rating"}
+  }
+  
+  Plotly.newPlot('ans5div', data, layout5);
+
 
         });
  

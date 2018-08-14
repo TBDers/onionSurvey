@@ -165,7 +165,64 @@ d3.wordcloud()
 .words(wordDisplay)
 .start();
 
-//////////////////////////////////////////////// ANSWER 4 CHART /////////////////////////////////////////////////////// 
+//////////////////////////////////////////////// ANSWER 4 CHART ///////////////////////////////////////////////////////
+
+
+var level = 180;
+
+// Trig to calc meter point
+var degrees = 180 - level,
+     radius = .5;
+var radians = degrees * Math.PI / 180;
+var x = radius * Math.cos(radians);
+var y = radius * Math.sin(radians);
+
+// Path: may have to change to create a better triangle
+var mainPath = 'M -.0 -0.025 L .0 0.025 L ',
+     pathX = String(x),
+     space = ' ',
+     pathY = String(y),
+     pathEnd = ' Z';
+var path = mainPath.concat(pathX,space,pathY,pathEnd);
+
+var data = [{ type: 'scatter',
+   x: [0], y:[0],
+    marker: {size: 28, color:'850000'},
+    showlegend: false,
+    name: 'speed',
+    text: level,
+    hoverinfo: 'text+name'},
+  { values: [50/2, 50/2, 50],
+  rotation: 90,
+  text: ['The Onion Survey is the Best!', 'The Onion Survey is the Worst!', ''],
+  textinfo: 'text',
+  textposition:'inside',
+  marker: {colors:['rgba(0, 1, 217)', 'rgba(0, 0, 0)', 'rgba(255, 255, 255, 0)']},
+  hoverinfo: 'label',
+  hole: .5,
+  type: 'pie',
+  showlegend: false
+}];
+
+var layout = {
+  shapes:[{
+      type: 'path',
+      path: path,
+      fillcolor: '850000',
+      line: {
+        color: '850000'
+      }
+    }],
+  title: 'The Onion Survey Approval Gauge',
+  height: 1000,
+  width: 1000,
+  xaxis: {zeroline:false, showticklabels:false,
+             showgrid: false, range: [-1, 1]},
+  yaxis: {zeroline:false, showticklabels:false,
+             showgrid: false, range: [-1, 1]}
+};
+
+Plotly.newPlot('ans4div', data, layout);
 
 
 

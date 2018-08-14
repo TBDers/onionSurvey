@@ -86,7 +86,7 @@
                 </h5>
                 <h5>What is your favorite language learned so far?</h5>
                 <div class="input-field col s12">
-                    <select>
+                    <select id = "question3">
                         <option value="" disabled selected>Choose your option</option>
                         <option value="HTML/CSS">HTML/CSS</option>
                         <option value="JavaScript">JavaScript</option>
@@ -104,7 +104,7 @@
             <h5>Onion Survey is the best project so far!</h5>
             <p>
                 <label>
-                    <input class="with-gap" name="group4" type="radio" checked/>
+                    <input class="with-gap" id = "question4" name="group4" type="radio" checked/>
                     <span>True</span>
                 </label>
             </p>
@@ -160,20 +160,15 @@
 
     $("#question2").ionRangeSlider({
         min: 0,
-        max: 100,
-        from: 50
+        max: 10,
+        from: 5
     });
 
     $("#question5").ionRangeSlider({
         grid: true,
         from: 5,
         values: [
-            "0", "1",
-            "2", "3",
-            "4", "5",
-            "6", "7",
-            "8", "9",
-            "10"
+            0,1,2,3,4,5,6,7,8,9,10
         ]
     });
 

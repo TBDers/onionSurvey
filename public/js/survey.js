@@ -1,11 +1,16 @@
 $("#submit").on("click", function (event) {
     event.preventDefault();
 
+
+
+
     // grab the form elements
     var newSurvey = {
         question1: $("#question1").val().trim(),
         question2: $("#question2").val().trim(),
-        question3: $("#textarea1").val().trim(),
+        question3: $("#question3").find(":selected").text(),
+        question4: $("#question4").val().trim(),
+        question5: $("#question5").val().trim()
     };
 
     console.log(newSurvey);
@@ -22,7 +27,9 @@ $("#submit").on("click", function (event) {
             // Clear the form when submitting
             $("#question1").val("");
             $("#question2").val("");
-            $("#textarea1").val("");
+            $("#question3").val("");
+            $("#question4").val("");
+            $("#question5").val("");
         });
 
 });

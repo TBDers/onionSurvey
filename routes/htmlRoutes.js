@@ -22,7 +22,9 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../views/admin.html"));
   });
 
-
+  app.get("/viz", function (req, res) {
+    res.sendFile(path.join(__dirname, "../views/visuals.html"));
+  });
 
   // // Load example page and pass in an example by id
   // app.get("/example/:id", function(req, res) {

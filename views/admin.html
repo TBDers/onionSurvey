@@ -26,6 +26,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
+  <!-- Plotly.js -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 
 </head>
 
@@ -245,142 +247,52 @@
                     <!--card widgets start-->
                     <div id="card-widgets">
                         <div class="row">
-                            <div class="col s12 m4 l4">
-                                <ul id="task-card" class="collection with-header">
-                                    <li class="collection-header teal accent-4">
-                                        <h4 class="task-card-title">My Task</h4>
-                                        <p class="task-card-date">Sept 16, 2017</p>
-                                    </li>
-                                    <li class="collection-item dismissable">
-                                        <input type="checkbox" id="task1" />
-                                        <label for="task1">Create Mobile App UI.
-                                            <a href="#" class="secondary-content">
-                                                <span class="ultra-small">Today</span>
-                                            </a>
-                                        </label>
-                                        <span class="task-cat cyan">Mobile App</span>
-                                    </li>
-                                    <li class="collection-item dismissable">
-                                        <input type="checkbox" id="task2" />
-                                        <label for="task2">Check the new API standerds.
-                                            <a href="#" class="secondary-content">
-                                                <span class="ultra-small">Monday</span>
-                                            </a>
-                                        </label>
-                                        <span class="task-cat red accent-2">Web API</span>
-                                    </li>
-                                    <li class="collection-item dismissable">
-                                        <input type="checkbox" id="task3" checked="checked" />
-                                        <label for="task3">Check the new Mockup of ABC.
-                                            <a href="#" class="secondary-content">
-                                                <span class="ultra-small">Wednesday</span>
-                                            </a>
-                                        </label>
-                                        <span class="task-cat teal accent-4">Mockup</span>
-                                    </li>
-                                    <li class="collection-item dismissable">
-                                        <input type="checkbox" id="task4" checked="checked" disabled="disabled" />
-                                        <label for="task4">I did it !</label>
-                                        <span class="task-cat deep-orange accent-2">Mobile App</span>
-                                    </li>
-                                </ul>
+                                <div id="Data">
+                                        <button type="submit" class="waves-effect waves-light btn" id="getData" style="background-color: darkcyan;">
+                                    
+                                            Get Data</button>
+                                            
+                                    </div>
+                            <div class="col s4 m4 l4">
+                                <div id="ans1div">
+
+                                </div>
+                                
                             </div>
-                            <div class="col s12 m12 l4">
-                                <div id="flight-card" class="card">
-                                    <div class="card-header deep-orange accent-2">
-                                        <div class="card-title">
-                                            <h4 class="flight-card-title">Flight</h4>
-                                            <p class="flight-card-date">June 18, Thu 04:50</p>
-                                        </div>
-                                    </div>
-                                    <div class="card-content-bg white-text">
-                                        <div class="card-content">
-                                            <div class="row flight-state-wrapper">
-                                                <div class="col s5 m5 l5 center-align">
-                                                    <div class="flight-state">
-                                                        <h4 class="margin">LDN</h4>
-                                                        <p class="ultra-small">London</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col s2 m2 l2 center-align">
-                                                    <i class="material-icons flight-icon">local_airport</i>
-                                                </div>
-                                                <div class="col s5 m5 l5 center-align">
-                                                    <div class="flight-state">
-                                                        <h4 class="margin">SFO</h4>
-                                                        <p class="ultra-small">San Francisco</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col s6 m6 l6 center-align">
-                                                    <div class="flight-info">
-                                                        <p class="small">
-                                                            <span class="grey-text text-lighten-4">Depart:</span> 04.50</p>
-                                                        <p class="small">
-                                                            <span class="grey-text text-lighten-4">Flight:</span> IB 5786</p>
-                                                        <p class="small">
-                                                            <span class="grey-text text-lighten-4">Terminal:</span> B</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col s6 m6 l6 center-align flight-state-two">
-                                                    <div class="flight-info">
-                                                        <p class="small">
-                                                            <span class="grey-text text-lighten-4">Arrive:</span> 08.50</p>
-                                                        <p class="small">
-                                                            <span class="grey-text text-lighten-4">Flight:</span> IB 5786</p>
-                                                        <p class="small">
-                                                            <span class="grey-text text-lighten-4">Terminal:</span> C</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            <div class="col s4 m4 l4">
+                                <div id="ans2div">
+                             
                                 </div>
                             </div>
-                            <div class="col s12 m4 l4">
-                                <div id="profile-card" class="card">
-                                    <div class="card-image waves-effect waves-block waves-light">
-                                        <img class="activator" src="images/12.png" alt="user bg">
-                                    </div>
-                                    <div class="card-content">
-                                        <img src="images/avatar-7.png" alt="" class="circle responsive-img activator card-profile-image cyan lighten-1 padding-2">
-                                        <a class="btn-floating activator btn-move-up waves-effect waves-light red accent-2 z-depth-4 right">
-                                            <i class="material-icons">edit</i>
-                                        </a>
-                                        <span class="card-title activator grey-text text-darken-4">Roger Waters</span>
-                                        <p>
-                                            <i class="material-icons">perm_identity</i> Project Manager</p>
-                                        <p>
-                                            <i class="material-icons">perm_phone_msg</i> +1 (612) 222 8989</p>
-                                        <p>
-                                            <i class="material-icons">email</i> yourmail@domain.com</p>
-                                    </div>
-                                    <div class="card-reveal">
-                                        <span class="card-title grey-text text-darken-4">Roger Waters
-                                            <i class="material-icons right">close</i>
-                                        </span>
-                                        <p>Here is some more information about this card.</p>
-                                        <p>
-                                            <i class="material-icons">perm_identity</i> Project Manager</p>
-                                        <p>
-                                            <i class="material-icons">perm_phone_msg</i> +1 (612) 222 8989</p>
-                                        <p>
-                                            <i class="material-icons">email</i> yourmail@domain.com</p>
-                                        <p>
-                                            <i class="material-icons">cake</i> 18th June 1990
-                                        </p>
-                                        <p>
-                                        </p>
-                                        <p>
-                                            <i class="material-icons">airplanemode_active</i> BAR - AUS
-                                        </p>
-                                        <p>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                        
                         </div>
+                        <div class="row">
+                                <div class="col s5 m4 l4">
+                                        <p class="center-align">Favorite Coding Language Word Cloud</p>
+                                    <div id="wordcloud">
+                               
+                                    </div>
+                                </div>
+                                   
+                                <div class="col s2 m4 l4">
+                                    </div>
+
+                                <div class="col s5 m4 l4">
+                                    <div id="ans5div">
+    
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                    <div class="col s12 m4 l4">
+                                        <div id="ans4div">
+        
+                                        </div>
+                                        
+                                    </div>
+                                </div>
                     </div>
                     <!--card widgets end-->
 
@@ -541,6 +453,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
     <!--Local JS File-->
     <script src="js/main.js"></script>
+    <script src="js/visuals.js"></script>
+    <script src="/js/d3.js" charset="utf-8"></script>
+    <script src="/js/d3.layout.cloud.js"></script>
+    <script src="/js/d3.wordcloud.js"></script>
 
 
 

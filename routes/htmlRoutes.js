@@ -18,6 +18,10 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../views/data.html"));
   });
 
+  app.get("/admin", function (req, res) {
+    res.sendFile(path.join(__dirname, "../views/admin.html"));
+  });
+
 
 
   // // Load example page and pass in an example by id

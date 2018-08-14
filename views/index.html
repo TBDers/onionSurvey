@@ -24,6 +24,12 @@
 
   <!--Favicon-->
   <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+
+  <!-- //Google Signin -->
+  <meta name="google-signin-client_id" content="421586911380-fcmc0u1q42cca6ipa2kpk808vimbue2n.apps.googleusercontent.com">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -113,6 +119,8 @@
 
         <h5 style="text-align: center; color: grey;">Sign In</h5>
 
+
+
         <div class="input-field col s12">
           <input id="email" type="email" class="validate" required>
           <label for="email">Email</label>
@@ -139,11 +147,12 @@
             <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
           </a>
         </div>
-
+        <br>
+        <!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
 
       </div>
       <div class="modal-footer">
-        <a href="survey" class="modal-close waves-effect waves-green btn-flat" style="color: white; background-color: darkcyan;">Login</a>
+        <a href="admin" class="modal-close waves-effect waves-green btn-flat" style="color: white; background-color: darkcyan;">Login</a>
       </div>
     </div>
 

@@ -16,7 +16,7 @@ $("#sendSurveyButton").on("click", function (event) {
         var template_params = {
             "to_name": "Cepa Head",
             "from_name": "Onion Survey",
-            "message_html": "Go to www.Onionsurvey.com if you're awesome and take the survey!",
+            "message_html": "Go to www.onionsurvey.com/data if you're awesome and take the survey!",
             "user_email": emailNames
         }
 
